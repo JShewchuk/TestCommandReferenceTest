@@ -1,0 +1,40 @@
+﻿{
+  "version": "1.0.0-*",
+  "testRunner": "mstest",
+  "buildOptions": {
+    "copyToOutput": {
+      "include": [ "appsettings.json", "Support\\" ],
+      "mappings": {
+        "dest/path": {
+          "include": [ "./Support" ]
+        }
+      }
+    }
+  },
+  "publishOptions": {
+    "include": [ "appsettings.json", "Support\\" ]
+  },
+
+  "dependencies": {
+    "Microsoft.NETCore.App": {
+      "type": "platform",
+      "version": "1.0.1"
+    },
+    "MSTest.TestFramework": "1.0.4-preview",
+    "dotnet-test-mstest": "1.1.1-preview",
+    "FluentAssertions": "4.19.0",
+    "InterfaceAssembly": "1.0.0-*",
+    "HostConsoleApp": { "target": "project" }
+  },
+
+
+  "frameworks": {
+    "netcoreapp1.0": {
+      "imports": [
+        "dotnet5.6",
+        "portable-net45+win8",
+        "dnxcore50"
+      ]
+    }
+  }
+  }

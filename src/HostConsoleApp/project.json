@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "emitEntryPoint": true,
+    "copyToOutput": {
+      "include": [ "appsettings.json", "Impl\\"],
+      "mappings": {
+        "dest/path": {
+          "include": [ "./Impl"]
+        }
+      }
+    }
+  },
+  "publishOptions": {
+    "include": [ "appsettings.json", "Impl\\" ]
+  },
+
+  "dependencies": {
+    "InterfaceAssembly": "1.0.0-*",
+    "Microsoft.Extensions.Configuration": "1.1.0",
+    "Microsoft.Extensions.Configuration.Binder": "1.0.0",
+    "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0",
+    "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
+    "Microsoft.Extensions.Configuration.Json": "1.1.0",
+    "Microsoft.NETCore.App": {
+      "type": "platform",
+      "version": "1.0.1"
+    },
+    "System.Reflection": "4.3.0",
+    "System.Runtime.Loader": "4.3.0",
+    "System.Text.RegularExpressions": "4.3.0"
+  },
+
+  "frameworks": {
+    "netcoreapp1.0": {
+      "imports": "dnxcore50"
+    }
+  }
+}
