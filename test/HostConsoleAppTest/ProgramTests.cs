@@ -18,10 +18,17 @@ namespace HostConsoleAppTest
             HostConsoleApp.Program.Run();
             Assert.IsTrue(true);
         }
+        //Either Test_CreateTestReference_HappyPath or Test_createTestReference_NoDot will fail
         [TestMethod]
         public void Test_CreateTestReference_HappyPath()
         {
             var testReference = HostConsoleApp.Program.CreateTestReference();
+            testReference.Should().NotBeNull();
+        }
+        [TestMethod]
+        public void Test_CreateTestReference_NoDot()
+        {
+            var testReference = HostConsoleApp.Program.CreateTestReferenceNoDot();
             testReference.Should().NotBeNull();
         }
 
